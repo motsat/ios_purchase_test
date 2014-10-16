@@ -14,6 +14,7 @@
 		3683E37F19F08211004CBAA2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3683E37E19F08211004CBAA2 /* Images.xcassets */; };
 		3683E38219F08211004CBAA2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3683E38019F08211004CBAA2 /* LaunchScreen.xib */; };
 		3683E38E19F08211004CBAA2 /* SinglePurchaseItemTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3683E38D19F08211004CBAA2 /* SinglePurchaseItemTests.m */; };
+		3683E39819F083F1004CBAA2 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3683E39719F083F1004CBAA2 /* StoreKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		3683E38719F08211004CBAA2 /* SinglePurchaseItemTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SinglePurchaseItemTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3683E38C19F08211004CBAA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3683E38D19F08211004CBAA2 /* SinglePurchaseItemTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SinglePurchaseItemTests.m; sourceTree = "<group>"; };
+		3683E39719F083F1004CBAA2 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3683E39819F083F1004CBAA2 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +66,7 @@
 		3683E36519F08210004CBAA2 = {
 			isa = PBXGroup;
 			children = (
+				3683E39719F083F1004CBAA2 /* StoreKit.framework */,
 				3683E37019F08211004CBAA2 /* SinglePurchaseItem */,
 				3683E38A19F08211004CBAA2 /* SinglePurchaseItemTests */,
 				3683E36F19F08211004CBAA2 /* Products */,
