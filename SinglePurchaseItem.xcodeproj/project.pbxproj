@@ -15,6 +15,7 @@
 		3683E38219F08211004CBAA2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3683E38019F08211004CBAA2 /* LaunchScreen.xib */; };
 		3683E38E19F08211004CBAA2 /* SinglePurchaseItemTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3683E38D19F08211004CBAA2 /* SinglePurchaseItemTests.m */; };
 		3683E39819F083F1004CBAA2 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3683E39719F083F1004CBAA2 /* StoreKit.framework */; };
+		3683E3A219F1477C004CBAA2 /* PurchaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3683E3A119F1477C004CBAA2 /* PurchaseTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,8 @@
 		3683E38C19F08211004CBAA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3683E38D19F08211004CBAA2 /* SinglePurchaseItemTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SinglePurchaseItemTests.m; sourceTree = "<group>"; };
 		3683E39719F083F1004CBAA2 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		3683E3A019F1477C004CBAA2 /* SinglePurchaseItemTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SinglePurchaseItemTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		3683E3A119F1477C004CBAA2 /* PurchaseTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +114,8 @@
 			children = (
 				3683E38D19F08211004CBAA2 /* SinglePurchaseItemTests.m */,
 				3683E38B19F08211004CBAA2 /* Supporting Files */,
+				3683E3A119F1477C004CBAA2 /* PurchaseTest.swift */,
+				3683E3A019F1477C004CBAA2 /* SinglePurchaseItemTests-Bridging-Header.h */,
 			);
 			path = SinglePurchaseItemTests;
 			sourceTree = "<group>";
@@ -233,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3683E3A219F1477C004CBAA2 /* PurchaseTest.swift in Sources */,
 				3683E38E19F08211004CBAA2 /* SinglePurchaseItemTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,6 +373,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -378,6 +385,8 @@
 				INFOPLIST_FILE = SinglePurchaseItemTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SinglePurchaseItemTests/SinglePurchaseItemTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SinglePurchaseItem.app/SinglePurchaseItem";
 			};
 			name = Debug;
@@ -386,6 +395,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -393,6 +403,7 @@
 				INFOPLIST_FILE = SinglePurchaseItemTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SinglePurchaseItemTests/SinglePurchaseItemTests-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SinglePurchaseItem.app/SinglePurchaseItem";
 			};
 			name = Release;
@@ -416,6 +427,7 @@
 				3683E39319F08211004CBAA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3683E39419F08211004CBAA2 /* Build configuration list for PBXNativeTarget "SinglePurchaseItemTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +436,7 @@
 				3683E39619F08211004CBAA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

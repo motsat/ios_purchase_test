@@ -9,6 +9,13 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *productTitile;
+@property (weak, nonatomic) IBOutlet UILabel *productPrice;
+@property (weak, nonatomic) IBOutlet UILabel *productDescription;
+@property (weak, nonatomic) IBOutlet UIButton *purchaseButton;
+@property (weak, nonatomic) IBOutlet UIButton *helloButton;
+- (IBAction)purchaseButtonOnTouch:(id)sender;
+- (IBAction)helloButtonOnTOuch:(id)sender;
 
 @end
 
@@ -24,4 +31,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)purchaseButtonOnTouch:(id)sender {
+}
+
+- (IBAction)helloButtonOnTOuch:(id)sender {
+}
 @end
