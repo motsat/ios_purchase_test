@@ -16,8 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    product = nil;
+
     NSSet *productIds = [NSSet setWithObject: @"Jewel"];
     productRequest = [[SKProductsRequest alloc] initWithProductIdentifiers:productIds];
     
@@ -40,6 +39,7 @@
     for (NSString *identifer in response.invalidProductIdentifiers) {
         NSLog(@"invalidProductIdentifiers: %@", identifer);
     }
+    NSSet *hoge = nil;
 }
 
 @end
