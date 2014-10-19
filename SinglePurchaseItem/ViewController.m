@@ -9,13 +9,6 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *productTitile;
-@property (weak, nonatomic) IBOutlet UILabel *productPrice;
-@property (weak, nonatomic) IBOutlet UILabel *productDescription;
-@property (weak, nonatomic) IBOutlet UIButton *purchaseButton;
-@property (weak, nonatomic) IBOutlet UIButton *helloButton;
-- (IBAction)purchaseButtonOnTouch:(id)sender;
-- (IBAction)helloButtonOnTOuch:(id)sender;
 
 @end
 
@@ -23,7 +16,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    product = nil;
+    NSSet *productIds = [NSSet setWithObject: @"Jewel"];
+    productRequest = [[SKProductsRequest alloc] initWithProductIdentifiers:productIds];
+    
+    productRequest.delegate = self;
+    [productRequest start];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,9 +30,16 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)purchaseButtonOnTouch:(id)sender {
+-(void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response {
+    if (response == nil) {
+        NSLog(@"didReceiveResponse responce is nil");
+        // TODO nilはアイテム無しの場合だけなの？
+        [self.productTitile setText: @"購入できるものはありません"];
+    }
+    
+    for (NSString *identifer in response.invalidProductIdentifiers) {
+        NSLog(@"invalidProductIdentifiers: %@", identifer);
+    }
 }
 
-- (IBAction)helloButtonOnTOuch:(id)sender {
-}
 @end

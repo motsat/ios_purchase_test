@@ -7,9 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <StoreKit/StoreKit.h>
 
 @interface ViewController : UIViewController
-
+<SKProductsRequestDelegate>
+{
+    SKProductsRequest *productRequest;
+    SKProduct *product;
+}
+@property (weak, nonatomic) IBOutlet UILabel *productTitile;
+@property (weak, nonatomic) IBOutlet UILabel *productPrice;
+@property (weak, nonatomic) IBOutlet UILabel *productDescription;
+- (IBAction)purchaseButtonOnTouch:(id)sender;
+- (IBAction)helloButtonOnTouch:(id)sender;
 
 @end
 
