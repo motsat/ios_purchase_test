@@ -39,6 +39,15 @@
     for (NSString *identifer in response.invalidProductIdentifiers) {
         NSLog(@"invalidProductIdentifiers: %@", identifer);
     }
+    
+    for (SKProduct *product in response.products) {
+        NSLog(@"product: %@ %@ %@ %d",
+              product.productIdentifier,
+              product.localizedTitle,
+              product.localizedDescription,
+              [product.price intValue] );
+    }
+    
     NSSet *hoge = nil;
 }
 
